@@ -1,0 +1,68 @@
+/* pages/mine/modify.wxss */
+
+.hi {
+  margin: 3vh 50rpx 0;
+  height: 15vh;
+  font-size: 50rpx;
+  text-align: center;
+}
+
+.hi .username {
+  font-weight: bold;
+}
+
+.hi .greetings {
+  margin-top: 20rpx;
+  font-size: 45rpx;
+}
+
+.div {
+  margin: 35rpx 50rpx 0;
+}
+
+.div .img-view {
+  margin: 0 auto;
+  width: 400rpx;
+  height: 400rpx;
+  border: 1px solid transparent;
+  border-radius: 100%;
+  /* background: #333; */
+  position: relative;
+}
+
+.div .img-view::after {
+  position: absolute;
+  top: -10rpx;
+  bottom: -10rpx;
+  left: -10rpx;
+  right: -10rpx;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  content: '';
+  z-index: -1;
+  border-radius: 100%;
+}
+
+.div .img-view image {
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.div .img-view .camera {
+  position: absolute;
+  /* bottom: -35rpx; */
+  left: calc(50% - 40rpx);
+  top: calc(50% - 40rpx); 
+  color: white;
+  font-size: 80rpx;
+  opacity: 0.8;
+}
+
+.div .umbrella-input {
+  margin-top: 50rpx;
+}
+
+.div .umbrella-button {
+  margin-top: 50rpx;
+}

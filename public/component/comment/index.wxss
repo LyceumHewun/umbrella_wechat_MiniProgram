@@ -1,0 +1,88 @@
+@import "/app.wxss";
+
+.comment {
+  min-height: 90rpx;
+  width: calc(100vw - 30rpx);
+  padding-left: 30rpx;
+}
+
+.comment .like, .comment .is-like {
+  color: #8a8a8a;
+  height: 70rpx;
+  width: 80rpx;
+  font-size: 33rpx;
+  line-height: 70rpx;
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+
+.comment .like::before {
+  content: "\e7df";
+}
+
+.comment .is-like::before {
+  content: "\e849";
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.comment .avatar {
+  margin-right: 30rpx;
+  height: 70rpx;
+  width: 70rpx;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.comment .center {
+  width: calc(100% - 100rpx - 80rpx);
+  display: inline-block;
+}
+
+.comment .center .nick {
+  font-size: 32rpx;
+  font-weight: bolder;
+}
+
+.comment .center .nick::after {
+  content: ' ';
+}
+
+.comment .center .content {
+  font-size: 30rpx;
+  letter-spacing: 3rpx;
+  line-height: 52rpx;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.comment .info {
+  font-size: 24rpx;
+  display: block;
+  margin-bottom: 50rpx;
+}
+
+.comment .info .time, .comment .info .like-num, .comment .info .reply {
+  color: #bfbfbf;
+  margin-right: 30rpx;
+  display: inline-block;
+}
+
+.comment .info .like-num, .comment .info .reply {
+  font-weight: bold;
+}
+
+.comment .more-comments {
+  margin-left: 100rpx;
+  color: #bfbfbf;
+  font-size: 24rpx;
+  display: block;
+  margin-bottom: 50rpx;
+}

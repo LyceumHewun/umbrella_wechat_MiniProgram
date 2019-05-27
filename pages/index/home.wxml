@@ -1,0 +1,26 @@
+<!--pages/index/home.wxml-->
+
+<!-- 主题内容 -->
+<ly-card wx:for='{{ data }}' wx:key='index'
+tweetsId='{{ item.id }}'
+userId='{{ item.userId }}'
+nick="{{ item.username }}" 
+avatar="{{ item.avatarUrl }}" 
+photos="{{ item.picturesList }}" 
+content="{{ item.content }}" 
+like="{{ item.likeCount }}" 
+comment="{{ item.commentCount }}"
+isLike="{{ item.isLike }}" 
+isInteresting="{{ item.isInteresting }}" 
+hasGift="{{ item.hasGift }}"
+hiddenText="{{ item.hiddenText }}"
+bind:clickComment='clickComment'
+bind:clickLike='clickLike'
+bind:imageLoad='imageLoad'
+/>
+
+<!-- 没有新内容 -->
+<ly-nothing-tips icon='icon-gouxuan' content='没有更多新内容了'/>
+
+<!-- 占位 -->
+<view style='height: 48px'></view>

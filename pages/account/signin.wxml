@@ -1,0 +1,14 @@
+<!--pages/account/signin.wxml-->
+
+<view class='title'>登 录</view>
+<view class='signin'>
+  <input class='umbrella-input {{ accountInputBorder }}' placeholder='手机号码或用户名' bindinput='accountInput'></input>
+  <input class='umbrella-input {{ passwordInputBorder }}' password placeholder='密码' bindinput='passwordInput'></input>
+  <button class='umbrella-button' catchtap='clickLogin'>登录</button>
+  <view class='tips'>忘记登录信息？<text>找回密码</text></view>
+  <view class='and'>或</view>
+  <button class='wechat-login umbrella-button' open-type='getUserInfo' bindgetuserinfo='wechatLogin'><text class='iconfont icon-wechat-fill'></text>使用微信登录</button>
+  <!-- 微信小程序不提供直接注册 -->
+  <view hidden class='tips'>没有账号？<text catchtap='gotoSignup'>请注册</text></view>
+  <view class='tips error-tips'>{{ errortips }}</view>
+</view>

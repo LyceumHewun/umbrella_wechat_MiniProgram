@@ -1,0 +1,23 @@
+<!--pages/publish/index.wxml-->
+
+<view class='photo-frame' catchtap='clickPhotoFrame'>
+  <image wx:if='{{ photos.length === 1 }}' class='photo' lazy-load mode='widthFix' src='{{ photos[0] }}'></image>
+  <swiper wx:if='{{ photos.length > 1 }}' class='photo' bindchange='swiperPhotoChange'>
+    <swiper-item wx:for='{{ photos }}' wx:key='index'>
+      <image class='swiper-photo' lazy-load mode='widthFix' src='{{ item }}'></image>
+    </swiper-item>
+  </swiper>
+  <view wx:if='{{ photos.length > 1 }}' class='tips'>{{ photoSwiperIndex }}/{{ photos.length }}</view>
+</view>
+
+<textarea class='textarea' bindinput='bindinput' placeholder='说说这张照片' show-confirm-bar='' auto-height></textarea>
+
+<view class='options'>
+  <view class='options-item'>
+    <text>仅自己可见</text>
+    <switch color='#87CEFF' bindchange="changePermissionType"></switch>
+  </view>
+</view>
+<view style='clear: both;'></view>
+
+<button class='umbrella-button' catchtap='clickPublish'>发 布</button>

@@ -1,0 +1,73 @@
+/* pages/index/square.wxss */
+
+.search {
+  height: 80rpx;
+  width: calc(100vw - 40rpx);
+  margin: 0 20rpx;
+}
+
+.search .icon-search {
+  width: 80rpx;
+  line-height: 80rpx;
+  font-size: 45rpx;
+  font-weight: bolder;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.search input {
+  height: 80rpx;
+  width: calc(100% - 80rpx);
+  line-height: 80rpx;
+  display: inline-block;
+}
+
+.choose-type {
+  height: 90rpx;
+  width: 100vw;
+  position: relative;
+  display: flex;
+}
+
+.choose-type::after, .choose-type::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #e5e5e5;
+  color: #e5e5e5;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  z-index: 2;
+}
+
+.choose-type::after {
+  bottom: -1px;
+}
+
+.choose-type::before {
+  top: -1px;
+}
+
+.choose-type .choose-type-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.choose-type .iconfont {
+  font-size: 60rpx;
+}
+
+.choose-type .choosed {
+  background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}

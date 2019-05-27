@@ -1,0 +1,236 @@
+@import "/app.wxss";
+
+view, text {
+  color: #333;
+}
+
+.top {
+  height: 100rpx;
+  width: calc(100% - 50rpx);
+  padding: 0 25rpx;
+  position: relative;
+}
+
+.top .avatar {
+  height: 70rpx;
+  width: 70rpx;
+  margin: 15rpx 0;
+  margin-right: 25rpx;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+.top .nick {
+  /* 宽度是 减去两边头像和操作符号的宽度 */
+  width: calc(100% - 70rpx - 25rpx - 70rpx);
+  line-height: 100rpx;
+  font-size: 33rpx;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.top .option {
+  height: 100rpx;
+  width: 70rpx;
+  line-height: 100rpx;
+  font-size: 55rpx;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+/* 底部0.5像素细线 */
+
+.top::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #e5e5e5;
+  color: #e5e5e5;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  z-index: 2;
+}
+
+.photo-frame {
+  width: calc(100vw + 2px);
+  margin: -1px;
+  max-height: 70vh;
+  overflow: hidden;
+  z-index: 3;
+  position: relative;
+}
+
+.photo-frame .photo {
+  width: calc(100vw + 2px);
+  margin: -1px;
+  padding: 0;
+}
+
+.photo-frame swiper {
+  height: 100vw;
+  position: relative;
+}
+
+.photo-frame .tips {
+  padding: 8rpx 25rpx;
+  font-size: 26rpx;
+  color: white;
+  background-color: #333;
+  border-radius: 50rpx;
+  top: 25rpx;
+  right: 20rpx;
+  position: absolute;
+  opacity: 0.8;
+  z-index: 3;
+}
+
+.photo-frame swiper-item {
+  display: flex;
+  align-items: Center;
+}
+
+.photo-frame swiper-item image {
+  width: calc(100vw + 2px);
+}
+
+swiper .swiper-photo {
+  width: calc(100vw + 2px);
+}
+
+.central {
+  height: 100rpx;
+  width: calc(100% - 50rpx);
+  padding: 0 25rpx;
+}
+
+.central .left, .central .right {
+  height: 100rpx;
+  width: 70rpx;
+  line-height: 100rpx;
+  font-size: 55rpx;
+  margin-right: 20rpx;
+  text-align: center;
+  display: inline-block;
+}
+
+.central .left {
+  float: left;
+}
+
+.central .right {
+  float: right;
+  margin-left: 20rpx;
+  margin-right: 0;
+}
+
+.central .icon-heart-fill {
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.central .icon-star-fill {
+  background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.central button {
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  overflow: inherit;
+  color: #333;
+  background-color: transparent;
+}
+
+.central button::after, .central button::before {
+  border: none;
+}
+
+.info {
+  line-height: 46rpx;
+  width: calc(100% - 50rpx);
+  padding: 0 25rpx;
+  font-size: 32rpx;
+  font-weight: bolder;
+  vertical-align: top;
+}
+
+.info .like, .info .comment {
+  margin-right: 30rpx;
+  display: inline-block;
+}
+
+.tweets {
+  margin: 6rpx 0 16rpx;
+  width: calc(100% - 50rpx);
+  padding: 0 25rpx;
+}
+
+.tweets-active {
+  background-color: #e5e5e5;
+}
+
+.tweets .nick {
+  font-size: 32rpx;
+  font-weight: bolder;
+}
+
+.tweets .content {
+  font-size: 30rpx;
+  letter-spacing: 3rpx;
+  line-height: 52rpx;
+}
+
+.tweets .content::before {
+  content: ' ';
+}
+
+.hidden-text {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.bottom {
+  width: calc(100% - 50rpx);
+  padding: 0 25rpx;
+  margin-bottom: 20rpx;
+}
+
+.bottom .time, .bottom .address {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #bfbfbf;
+  display: inline-block;
+}
+
+.bottom .time {
+  margin-right: 12rpx;
+}
+
+.bottom .iconfont {
+  font-size: 27rpx;
+  color: #bfbfbf;
+  display: inline-block;
+}
+
+.bottom .address {
+}
+
+.bottom .address::before {
+  content: ' ';
+}

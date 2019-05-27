@@ -1,0 +1,86 @@
+@import "/app.wxss";
+
+.sub-comment {
+  min-height: 90rpx;
+  width: calc(100% - 100rpx);
+  padding-left: 100rpx;
+}
+
+.sub-comment .like, .sub-comment .is-like {
+  color: #8a8a8a;
+  height: 70rpx;
+  width: 80rpx;
+  font-size: 33rpx;
+  line-height: 70rpx;
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+
+.sub-comment .like::before {
+  content: "\e7df";
+}
+
+.sub-comment .is-like::before {
+  content: "\e849";
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.sub-comment .avatar {
+  margin-right: 30rpx;
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sub-comment .center {
+  width: calc(100% - 90rpx - 80rpx);
+  display: inline-block;
+}
+
+.sub-comment .center .nick, .sub-comment .center .at-nick {
+  font-size: 30rpx;
+  font-weight: bolder;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.sub-comment .center .at-nick {
+  font-weight: bold;
+  color: #104e8b;
+}
+
+.sub-comment .center .nick::after, .sub-comment .center .at-nick::after {
+  content: ' ';
+}
+
+.sub-comment .center .content {
+  font-size: 30rpx;
+  letter-spacing: 3rpx;
+  line-height: 52rpx;
+}
+
+.sub-comment .info {
+  font-size: 24rpx;
+  display: block;
+  margin-bottom: 50rpx;
+}
+
+.sub-comment .info .time, .sub-comment .info .like-num,
+.sub-comment .info .reply {
+  color: #bfbfbf;
+  margin-right: 30rpx;
+  display: inline-block;
+}
+
+.sub-comment .info .like-num, .sub-comment .info .reply {
+  font-weight: bold;
+}

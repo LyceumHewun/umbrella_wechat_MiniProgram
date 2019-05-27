@@ -1,0 +1,72 @@
+/* pages/account/signin.wxss */
+
+.title {
+  height: 13vh;
+  line-height: 21vh;
+  vertical-align: text-bottom;
+  margin-bottom: 80rpx;
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+
+.signin {
+  margin: 0 50rpx;
+}
+
+.signin input {
+  margin-bottom: 35rpx;
+}
+
+.signin .tips {
+  color: #8a8a8a;
+  margin: 35rpx 0;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.signin .tips text {
+  color: #000;
+  font-weight: bold;
+}
+
+.signin .error-tips {
+  color: #ff4040;
+}
+
+.signin .and {
+  margin: 35rpx 0;
+  font-size: 32rpx;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  color: #8a8a8a;
+}
+
+.signin .and::before, .signin .and::after {
+  content: '';
+  height: 1px;
+  width: calc((95% - 110rpx) / 2);
+  position: absolute;
+  background: #e5e5e5;
+  top: 50%;
+}
+
+.signin .and::before {
+  left: 0;
+}
+
+.signin .and::after {
+  right: 0;
+}
+
+.signin .wechat-login {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.signin .iconfont {
+  padding-right: 10rpx;
+  line-height: 100rpx;
+  font-size: 35rpx;
+  color: white;
+}

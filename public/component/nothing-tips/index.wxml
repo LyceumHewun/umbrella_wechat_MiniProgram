@@ -1,0 +1,7 @@
+<view class='tips' style='{{ hidden ? "height:220rpx" : "" }}'>
+  <view class='no-more-content'>
+    <view class='iconfont {{ icon }}'></view>
+  </view>
+  <view class='a1'>{{ content }}</view>
+  <view class='a2' wx:if='{{ submessage !== "" }}'>{{ submessage }}</view>
+</view>

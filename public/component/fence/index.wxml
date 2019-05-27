@@ -1,0 +1,12 @@
+<view class='fence'>
+  <image 
+  mode='aspectFill'
+  wx:for='{{ picturesList }}' 
+  wx:key='index' 
+  id='{{ item.id }}'
+  catchtap='clickPhoto' 
+  class='fence-item {{ item.picturesList.length > 1 ? "more-photo" : "" }}' 
+  src='{{ item.picturesList[0] }}'></image>
+</view>
+<!-- class -->
+<!-- interesting gift  -->

@@ -1,0 +1,8 @@
+
+<view class='payment' style='{{ !show ? "top: -500rpx;" : ""}}'>
+  <view class='title'>{{ payment ? "支付" : "充值" }}金额</view>
+  <view wx:if='{{ payment }}' class='money'>{{ money }}</view>
+  <input wx:if='{{ !payment }}' placeholder='请输入金额..' type='digit'></input>
+  <button class='umbrella-button' catchtap='clickButton'>确认{{ payment ? "支付" : "充值" }}</button>
+</view>
+<view wx:if='{{ show }}' class='mask' catchtap='clickMask'></view>

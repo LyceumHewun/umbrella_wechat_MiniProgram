@@ -1,0 +1,42 @@
+@import "/app.wxss";
+
+.fence {
+  width: calc(100vw + 2px);
+  margin-top: -1px;
+}
+
+.fence .fence-item {
+  width: calc((100vw - 4px) / 3);
+  height: calc((100vw - 4px) / 3);
+  display: inline-block;
+  margin: 0 2px -2px 0;
+}
+
+.fence .more-photo, .fence .gift, .fence .interesting {
+  position: relative;
+}
+
+.fence .more-photo::after, .fence .gift::after, .fence .interesting::after {
+  top: 8rpx;
+  right: 8rpx;
+  position: absolute;
+  font-family: "iconfont" !important;
+  font-size: 50rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  z-index: 3;
+  color: white;
+}
+
+.fence .more-photo::after {
+  content: "\e613" !important;
+}
+
+.fence .gift::after {
+  content: "\e867" !important;
+}
+
+.fence .interesting::after {
+  content: "\e847" !important;
+}

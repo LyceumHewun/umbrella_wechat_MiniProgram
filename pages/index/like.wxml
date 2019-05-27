@@ -1,0 +1,8 @@
+<!--pages/index/like.wxml-->
+<!-- 收藏 不是like -->
+
+<ly-fence picturesList='{{ data }}'/>
+
+
+<!-- 占位 -->
+<view style='height: 48px'></view>

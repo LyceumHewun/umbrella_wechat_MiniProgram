@@ -1,0 +1,21 @@
+<!--pages/wallet/index.wxml-->
+
+<view class='wallet' style='background-image: linear-gradient({{ walletBackgroud }}deg, #e0c3fc 0%, #8ec5fc 100%);'>
+  <view class='title'>可用余额</view>
+  <view class='money'>0</view>
+</view>
+
+<view class='button-view'>
+  <button style='margin-right: 4%;' catchtap='clickPayment'>充值</button>
+  <button>提现</button>
+</view>
+
+<view class='wallet-log'>
+  <view class='wallet-log-item'>趣图互动获得<view class='plus'>0.61</view></view>
+  <view class='wallet-log-item'>充值<view class='plus'>66.66</view></view>
+  <view class='wallet-log-item'>发起趣图互动<view class='less'>5.00</view></view>
+  <view class='wallet-log-item'>趣图互动获得<view class='plus'>1.80</view></view>
+  <view class='wallet-log-item'>趣图互动获得<view class='plus'>0.03</view></view>
+</view>
+
+<ly-payment show='{{ showPayment }}'/>

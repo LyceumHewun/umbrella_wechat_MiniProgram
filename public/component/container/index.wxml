@@ -1,0 +1,4 @@
+<view class='choose-type'>
+  <view catchtap='click1' class='choose-type-item iconfont icon-type1 {{ choose === 0 ? "choosed" : ""}}'></view>
+  <view catchtap='click2' class='choose-type-item iconfont icon-type {{ choose === 1 ? "choosed" : ""}}'></view>
+</view>

@@ -1,0 +1,81 @@
+/* pages/tweets/index.wxss */
+
+.comment-input {
+  height: 110rpx;
+  width: calc(100vw - 60rpx);
+  padding: 0 30rpx;
+  margin-bottom: 50rpx;
+  position: relative;
+}
+
+.comment-input .avatar {
+  margin: 20rpx 0;
+  margin-right: 30rpx;
+  height: 70rpx;
+  width: 70rpx;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.comment-input input {
+  height: 110rpx;
+  width: calc(100% - 100rpx);
+  display: inline-block;
+}
+
+.comment-input::after, .comment-input::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #e5e5e5;
+  color: #e5e5e5;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  z-index: 2;
+}
+
+.comment-input::after {
+  bottom: -1px;
+}
+
+.comment-input::before {
+  top: -1px;
+}
+
+.comment-input-fix {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 99;
+}
+
+.comment-input-fix-div {
+  height: 160rpx;
+  color: transparent;
+}
+
+.comment {
+  min-height: calc(100vh - 110rpx - 24px);
+}
+
+.interesting-view {
+  margin-bottom: 20rpx;
+  min-height: 110rpx;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.interesting-view .icon-camera {
+  font-size: 70rpx;
+  line-height: 110rpx;
+}
+
+.interesting-view .hidden-conent {
+  vertical-align: middle;
+}

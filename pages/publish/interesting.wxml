@@ -1,0 +1,32 @@
+<!--pages/publish/interesting.wxml-->
+
+<view class='photo-frame' catchtap='clickPhotoFrame'>
+  <image wx:if='{{ photos.length === 1 }}' class='photo' lazy-load mode='widthFix' src='{{ photos[0] }}'></image>
+  <swiper wx:if='{{ photos.length > 1 }}' class='photo' bindchange='swiperPhotoChange'>
+    <swiper-item wx:for='{{ photos }}' wx:key='index'>
+      <image class='swiper-photo' lazy-load mode='widthFix' src='{{ item }}'></image>
+    </swiper-item>
+  </swiper>
+  <view wx:if='{{ photos.length > 1 }}' class='tips'>{{ photoSwiperIndex }}/{{ photos.length }}</view>
+</view>
+
+<textarea class='textarea' bindinput='bindinput' placeholder='说说这张照片' show-confirm-bar='' auto-height></textarea>
+
+<view class='options'>
+  <view class='tops'>互动成功后可查看</view>
+  <input class='umbrella-input' bindinput='hiddenContentInput' placeholder='隐藏信息'></input>
+  <view class='options-item'>
+    <text>红包</text>
+    <switch color='#87CEFF' bindchange="changePermissionType" value="{{ hasGift }}"></switch>
+  </view>
+  <view wx:if='{{ hasGift }}'>
+    <view class='tops'>其他用户互动成功后可领取一定金额的红包</view>
+    <input class='umbrella-input' bindinput='giftQuantityInput' placeholder='数量' type='number' value='{{ giftinput }}'></input>
+    <input class='umbrella-input' bindinput='giftTotalAmountInput' placeholder='总金额' type='digit' value='{{ giftinput }}'></input>
+  </view>
+</view>
+
+
+<button class='umbrella-button' catchtap='clickPublish'>发 布</button>
+
+<ly-payment show='{{ showPayment }}' payment money='{{ money }}' bind:clickButton='clickPayment'/>

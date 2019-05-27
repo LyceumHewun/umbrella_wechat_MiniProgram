@@ -1,0 +1,36 @@
+<!--pages/index/square.wxml-->
+<!-- 搜索框 -->
+<view class='search'>
+  <view class='iconfont icon-search'></view>
+  <input placeholder='搜索' confirm-type='search'></input>
+</view>
+<!-- 类型选择栏 -->
+<!-- <view class='choose-type'>
+  <view class='choose-type-item iconfont icon-type1 choosed'></view>
+  <view class='choose-type-item iconfont icon-type'></view>
+</view> -->
+<ly-container bind:click1='click1' bind:click2='click2' />
+<!-- 内容 -->
+<!-- 小图 -->
+<ly-fence wx:if='{{ container === 0 }}' picturesList='{{ data }}'/>
+<!-- 大图 -->
+<ly-card wx:if='{{ container === 1 }}' wx:for='{{ data }}' wx:key='index'
+tweetsId='{{ item.id }}'
+userId='{{ item.userId }}'
+nick="{{ item.username }}" 
+avatar="{{ item.avatarUrl }}" 
+photos="{{ item.picturesList }}" 
+content="{{ item.content }}" 
+like="{{ item.likeCount }}" 
+comment="{{ item.commentCount }}"
+isLike="{{ item.isLike }}" 
+isInteresting="{{ item.isInteresting }}" 
+hasGift="{{ item.hasGift }}"
+hiddenText="{{ item.hiddenText }}"
+bind:clickComment='clickComment'
+bind:clickLike='clickLike'
+bind:imageLoad='imageLoad'
+/>
+
+<!-- 占位 -->
+<view style='height: 48px'></view>

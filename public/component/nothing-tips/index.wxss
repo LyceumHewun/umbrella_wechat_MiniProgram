@@ -1,0 +1,55 @@
+@import "/app.wxss";
+
+.no-more-content {
+  width: 95%;
+  margin: 0 2.5%;
+  text-align: center;
+  position: relative;
+}
+
+.no-more-content .iconfont {
+  font-size: 110rpx;
+  font-weight: lighter;
+  display: inline-block;
+  background-image: linear-gradient(225deg, #37ecba 0%, #72afd3 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.no-more-content::before, .no-more-content::after {
+  content: '';
+  height: 1px;
+  width: calc((95% - 110rpx) / 2);
+  position: absolute;
+  background: #8a8a8a;
+  top: 50%;
+}
+
+.no-more-content::before {
+  left: 0;
+}
+
+.no-more-content::after {
+  right: 0;
+}
+
+.tips {
+  width: 100%;
+  padding: 50rpx 0;
+  overflow: hidden;
+  text-align: center;
+  transition: all 350ms;
+  -webkit-transition: all 350ms;
+}
+
+.tips .a1 {
+  font-size: 45rpx;
+  font-weight: bolder;
+  color: #333;
+}
+
+.tips .a2 {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: #8a8a8a;
+}

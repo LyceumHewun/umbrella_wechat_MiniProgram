@@ -1,0 +1,14 @@
+<!--pages/account/signup.wxml-->
+
+<view class='title'>SIGN UP</view>
+<view class='signup'>
+  <view class='phone-view {{ phoneInputBorder }}'>
+    <input class='umbrella-input' disabled placeholder='手机号码' value='{{ phone}}'></input>
+    <button class='wechat-phone umbrella-button' open-type='getPhoneNumber' bindgetphonenumber='getPhoneNumber'>点击获取</button>
+  </view>
+  <input class='umbrella-input {{ usernameInputBorder }} ' placeholder='用户名' bindinput='inputUsername'></input>
+  <input password class='umbrella-input {{ passInputBorder1 }}' bindinput='inputpass1' placeholder='输入密码'></input>
+  <input password class='umbrella-input {{ passInputBorder2 }}' bindinput='inputpass2' placeholder='再次输入密码'></input>
+  <button class='umbrella-button' catchtap='clickSignupButton'>完成注册</button>
+  <view class='tips error-tips'>{{ errortips }}</view>
+</view>

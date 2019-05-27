@@ -1,0 +1,16 @@
+/* pages/index/home.wxss */
+
+.tips {
+  width: 100%;
+  margin: 50rpx 0;
+  overflow: hidden;
+  text-align: center;
+  transition: all 350ms;
+  -webkit-transition: all 350ms;
+}
+
+.tips text {
+  font-size: 45rpx;
+  font-weight: bolder;
+  color: #333;
+}

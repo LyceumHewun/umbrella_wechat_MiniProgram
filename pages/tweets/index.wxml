@@ -1,0 +1,41 @@
+<!--pages/tweets/index.wxml-->
+<ly-card 
+id='ly-card'
+tweetsId='{{ data.id }}'
+userId='{{ data.userId }}'
+nick="{{ data.username }}" 
+avatar="{{ data.avatarUrl }}" 
+photos="{{ data.picturesList }}" 
+content="{{ data.content }}" 
+like="{{ data.likeCount }}" 
+comment="{{ data.commentCount }}"
+isLike="{{ data.isLike }}" 
+isInteresting="{{ data.isInteresting }}" 
+hasGift="{{ data.hasGift }}"
+hiddenText="{{ data.hiddenText }}"
+bind:clickComment='clickComment'
+bind:clickLike='clickLike'
+bind:imageLoad='imageLoad'
+/>
+
+<!-- 趣图区 -->
+<view class='interesting-view' wx:if='{{ data.isInteresting }}'>
+  <view wx:if='{{ !interesting.hiddenConent }}' class='iconfont icon-camera' catchtap='clickCamera'></view>
+  <view wx:if='{{ interesting.hiddenConent }}' class='hidden-conent'>{{ interesting.hiddenConent }}</view>
+</view>
+
+<!-- 评论区 -->
+<!-- 评论输入框 -->
+<view class='comment-input {{ fixCommentInput ? "comment-input-fix" : "" }}'>
+  <image wx:if='{{ avatarUrl !== "" }}' lazy-load mode='aspectFill' class='avatar' src='{{ avatarUrl }}'></image>
+  <view wx:if='{{ avatarUrl === "" }}' class='avatar'>
+    <open-data type='userAvatarUrl'></open-data>
+  </view>
+  <input bindinput='inputComment' bindconfirm='bindconfirm' placeholder='输入评论..' focus='{{ commentInputFocus }}' value='{{ comment }}'></input>
+</view>
+<view wx:if='{{ fixCommentInput }}' class='comment-input-fix-div'>fix时占位</view>
+<!-- 历史评论 -->
+<view class='comment'>
+  <ly-nothing-tips wx:if='{{ commentList.length === 0 }}' hidden='' icon='icon-comment' content='还没有人评论' submessage='还不快来抢沙发'></ly-nothing-tips>
+  <ly-comment wx:for='{{ commentList }}' wx:key='index' comment='{{ item }}' bind:clickReply='clickCommentReply'/>
+</view>

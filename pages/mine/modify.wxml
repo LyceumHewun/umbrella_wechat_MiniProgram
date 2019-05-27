@@ -1,0 +1,16 @@
+<!--pages/mine/modify.wxml-->
+<!-- 修改个人资料 -->
+
+<view class='hi'>
+  <view class='username'>{{ username }}</view>
+  <view class='greetings'>修改资料</view> 
+</view>
+<view class='div'>
+  <view class='img-view' catchtap='clickImage'>
+    <image src='{{ avatarUrl }}' mode='aspectFill'></image>
+    <view class='camera iconfont icon-camera'></view>
+  </view>
+  <input class='umbrella-input' placeholder='自我介绍' bindinput='introductionInput' value='{{ introduction }}'></input>
+  <input class='umbrella-input' placeholder='个人网站' bindinput='websiteInput' value='{{ website }}'></input>
+  <button class='umbrella-button' catchtap='clickButton'>修改</button>
+</view>

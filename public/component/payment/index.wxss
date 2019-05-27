@@ -1,0 +1,52 @@
+@import "/app.wxss";
+
+.payment {
+  padding: 0 30rpx;
+  margin: 0 calc(15vw - 30rpx);
+  height: 400rpx;
+  width: 70vw;
+  background-color: white;
+  position: fixed;
+  top: calc(50vh - 350rpx / 2);
+  border-radius: 15rpx;
+  z-index: 999;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.payment .title {
+  margin-top: 50rpx;
+  font-size: 40rpx;
+  text-align: center;
+}
+
+.payment .money {
+  margin-top: 50rpx;
+  font-size: 60rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.payment input {
+  margin-top: 50rpx;
+  font-size: 40rpx;
+  text-align: center;
+}
+
+.payment .umbrella-button {
+  margin-top: 50rpx;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.mask {
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 998;
+  background: #333;
+  opacity: 0.8;
+}

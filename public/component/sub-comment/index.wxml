@@ -1,0 +1,21 @@
+<view class='sub-comment'>
+  <!-- 头像 -->
+  <image mode='aspectFill' class='avatar' src='{{ comment.avatarUrl }}'></image>
+  <!-- 中部内容 -->
+  <view class='center'>
+    <!-- 用户名 -->
+    <text class='nick' catchtap='clickUsername'>{{ comment.username }}</text>
+    <!-- @的用户名 -->
+    <text class='at-nick'></text>
+    <!-- 评论 -->
+    <text class='content'>{{ comment.content }}</text>
+    <!-- 详细信息 -->
+    <view class='info'>
+      <text class='time'>刚刚</text>
+      <text class='like-num' wx:if='{{ comment.likeCount !== 0 }}'>{{ comment.likeCount }}次赞</text>
+      <text class='reply' catchtap='clickReply'>回复</text>
+    </view>
+  </view>
+  <!-- 是否点赞 -->
+  <view catchtap='clickLike' class='{{ comment.isLike ? "is-" : "" }}like'></view>
+</view>

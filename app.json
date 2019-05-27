@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/index/square",
+    "pages/index/home",
+    "pages/index/mine",
+    "pages/publish/interesting",
+    "pages/publish/index",
+    "pages/mine/modify",
+    "pages/mine/index",
+    "pages/wallet/index",
+    "pages/index/publish",
+    "pages/index/like",
+    "pages/tweets/index",
+    "pages/account/signin",
+    "pages/account/signup",
+    "pages/account/addinfo",
+    "pages/index/index"
+  ],
+  
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Umbrella",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/home",
+        "iconPath": "img/tabBar/home1.png",
+        "selectedIconPath": "img/tabBar/home-fill2.png"
+      },
+      {
+        "pagePath": "pages/index/square",
+        "iconPath": "img/tabBar/search1.png",
+        "selectedIconPath": "img/tabBar/search2.png"
+      },
+      {
+        "pagePath": "pages/index/publish",
+        "iconPath": "img/tabBar/plus-square1.png",
+        "selectedIconPath": "img/tabBar/plus-square1.png"
+      },
+      {
+        "pagePath": "pages/index/like",
+        "iconPath": "img/tabBar/heart1.png",
+        "selectedIconPath": "img/tabBar/heart-fill2.png"
+      },
+      {
+        "pagePath": "pages/index/mine",
+        "iconPath": "img/tabBar/user1.png",
+        "selectedIconPath": "img/tabBar/user2.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "ly-card": "/public/component/card/index",
+    "ly-fence": "/public/component/fence/index",
+    "ly-comment": "/public/component/comment/index",
+    "ly-sub-comment": "/public/component/sub-comment/index",
+    "ly-nothing-tips": "/public/component/nothing-tips/index",
+    "ly-container": "/public/component/container/index",
+    "ly-payment": "/public/component/payment/index"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于图片互动"
+    }
+  }
+}

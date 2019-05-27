@@ -1,0 +1,22 @@
+<view class='comment'>
+  <!-- 头像 -->
+  <image mode='aspectFill' class='avatar' src='{{ comment.avatarUrl }}'></image>
+  <!-- 中部内容 -->
+  <view class='center'>
+    <!-- 用户名 -->
+    <text class='nick' catchtap='clickUsername'>{{ comment.username }}</text>
+    <!-- 评论 -->
+    <text class='content'>{{ comment.content }}</text>
+    <!-- 详细信息 -->
+    <view class='info'>
+      <text class='time'>1小时前</text>
+      <text class='like-num' wx:if='{{ comment.likeCount !== 0 }}'>{{ comment.likeCount }}次赞</text>
+      <text class='reply' catchtap='clickReply'>回复</text>
+    </view>
+  </view>
+  <!-- 是否点赞 -->
+  <view catchtap='clickLike' class='{{ comment.isLike ? "is-" : "" }}like'></view>
+  <view class='more-comments' wx:if='{{ comment.commentCount !== 0 && subComment.length === 0 }}' catchtap='clickMoreSubComment'>查看更多回复({{ comment.commentCount }})</view>
+  <!-- 回复该评论的评论 -->
+  <ly-sub-comment wx:for='{{ subComment }}' wx:key='index' comment='{{ item }}' bind:clickReply='clickReply'></ly-sub-comment>
+</view>

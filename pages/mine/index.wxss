@@ -1,0 +1,67 @@
+/* pages/mine/index.wxss */
+
+.top {
+  margin: 30rpx 50rpx;
+}
+
+.top .avatar {
+  margin-right: 50rpx;
+  height: 180rpx;
+  width: 180rpx;
+  border-radius: 100%;
+}
+
+.top .right {
+  height: 100rpx;
+  width: calc(100% - 180rpx - 50rpx);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.top .right .info {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.top .right .info .info-item {
+  font-size: 32rpx;
+  font-weight: bolder;
+  display: inline-block;
+  text-align: center;
+  width: 33.33%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.top .right .info .info-item view {
+  font-size: 28rpx;
+  font-weight: normal;
+  color: #8a8a8a;
+}
+
+.top .right .mine-button {
+  line-height: 65rpx;
+  font-size: 28rpx;
+  background-color: transparent;
+}
+
+.other-info {
+  margin: 50rpx 50rpx 35rpx;
+  line-height: 50rpx;
+}
+
+.other-info .username {
+  font-size: 28rpx;
+  font-weight: bolder;
+}
+
+.other-info .introduction {
+  font-size: 28rpx;
+  color: #8a8a8a;
+}
+
+.other-info .website {
+  font-size: 28rpx;
+  color: #87ceff;
+}

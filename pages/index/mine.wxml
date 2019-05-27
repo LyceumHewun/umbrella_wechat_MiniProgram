@@ -1,0 +1,48 @@
+<!--pages/index/mine.wxml-->
+
+<view class='top'>
+  <image class='avatar' mode='aspectFill' src='{{ userInfo.avatarUrl }}'></image>
+  <view class='right'>
+    <view class='info'>
+      <view class='info-item'>{{ userOtherInfo.tweetsCount }}<view>推文</view></view>
+      <view class='info-item' catchtap='clickFollower'>{{ userOtherInfo.follower }}<view>粉丝</view></view>
+      <view class='info-item' catchtap='clickFollowing'>{{ userOtherInfo.following }}<view>已关注</view></view>
+    </view>
+    <button catchtap='clickModifyUserInfo' class='mine-button'>编辑资料</button>
+  </view>
+</view>
+
+<view class='other-info'>
+  <view class='username'>{{ userInfo.username }}</view>
+  <view wx:if='{{ userInfo.introduction }}' class='introduction'>{{ userInfo.introduction }}</view>
+  <view wx:if='{{ userInfo.website }}' class='website'>{{ userInfo.website }}</view>
+</view>
+
+<view catchtap='clickWallet' class='wallet iconfont' style='background-image: linear-gradient({{ walletBackgroud }}deg, #e0c3fc 0%, #8ec5fc 100%);'>{{ userInfo.walletMoney }}</view>
+
+<ly-container bind:click1='click1' bind:click2='click2'/>
+
+<!-- 内容 -->
+<!-- 小图 -->
+<ly-fence wx:if='{{ container === 0 }}' picturesList='{{ tweetsList }}'/>
+<!-- 大图 -->
+<ly-card wx:if='{{ container === 1 }}' wx:for='{{ tweetsList }}' wx:key='index'
+tweetsId='{{ item.id }}'
+userId='{{ item.userId }}'
+nick="{{ item.username }}" 
+avatar="{{ item.avatarUrl }}" 
+photos="{{ item.picturesList }}" 
+content="{{ item.content }}" 
+like="{{ item.likeCount }}" 
+comment="{{ item.commentCount }}"
+isLike="{{ item.isLike }}" 
+isInteresting="{{ item.isInteresting }}" 
+hasGift="{{ item.hasGift }}"
+hiddenText="{{ item.hiddenText }}"
+bind:clickComment='clickComment'
+bind:clickLike='clickLike'
+bind:imageLoad='imageLoad'
+/>
+
+<!-- 占位 -->
+<view style='height: 48px'></view>

@@ -1,0 +1,43 @@
+<!-- 顶部信息栏 -->
+<view class='top'>
+  <image mode='aspectFill' class='avatar' src='{{ avatar }}'></image>
+  <text class='nick' catchtap='clickUsername'>{{ nick }}</text>
+  <view class='iconfont icon-option option' catchtap='clickOption'></view>
+</view>
+<!-- 相框 -->
+<view class='photo-frame' catchtap='clickPhotoFrame'>
+  <image wx:if='{{ photos.length === 1 }}' class='photo' lazy-load mode='widthFix' src='{{ photos[0] }}' bindload='imageLoad'></image>
+  <swiper wx:if='{{ photos.length > 1 }}' class='photo' bindchange='swiperPhotoChange'>
+    <swiper-item wx:for='{{ photos }}' wx:key='index'>
+      <image class='swiper-photo' lazy-load mode='widthFix' src='{{ item }}' bindload='imageLoad'></image>
+    </swiper-item>
+  </swiper>
+  <view wx:if='{{ photos.length > 1 }}' class='tips'>{{ photoSwiperIndex }}/{{ photos.length }}</view>
+</view>
+<!-- 中部信息栏 -->
+<view class='central'>
+  <view hover-class="active2" hover-stay-time="100" class='left iconfont icon-heart {{ isLike ? "icon-heart-fill" : "" }}' catchtap='clickLike'></view>
+  <view class='left iconfont icon-message' catchtap='clickComment'></view>
+  <button open-type='share' class='left iconfont icon-share' id='{{ tweetsId }}' data-photo='{{ photos[0] }}'></button>
+  <!-- <view class='left iconfont icon-share' catchtap='clickShare'></view> -->
+  <view hover-class="active2" hover-stay-time="100" class='right iconfont icon-star {{ isCollected ? "icon-star-fill" : "" }}' catchtap='clickCollect'></view>
+  <view wx:if='{{ isInteresting && !hasGift }}' class='right iconfont icon-smile'></view>
+  <view wx:if='{{ hasGift }}' class='right iconfont icon-gift'></view>
+</view>
+<!-- 赞、评论数、播放量等等的信息 -->
+<view class='info'>
+  <text class='like' wx:if="{{ like != 0 }}">{{ like }}次赞</text>
+  <text class='comment' wx:if="{{ comment != 0 }}">{{ comment }}条评论</text>
+</view>
+<!-- 主要内容 -->
+<view wx:if="{{ content !== '' }}" class='tweets {{ hiddenText ? "hidden-text" : ""}}' catchtap='seeMoreContent' hover-class='{{ hiddenText ? "tweets-active" : "" }}'>
+  <text class='nick'>{{ nick }}</text>
+  <text class='content'>{{ content }}</text>
+</view>
+<!-- 底部 时间地点 -->
+<view class='bottom'>
+  <view class='time'>{{ time }}</view>
+  <view class='iconfont icon-location' wx:if="{{ adress !== '' }}">
+    <text class='address'>广州 天河</text>
+  </view>
+</view>

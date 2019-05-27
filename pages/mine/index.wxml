@@ -1,0 +1,25 @@
+<!--pages/mine/index.wxml-->
+<!-- 个人页 -->
+
+<view class='top'>
+  <image class='avatar' mode='aspectFill' src='{{ userInfo.avatarUrl }}'></image>
+  <view class='right'>
+    <view class='info'>
+      <view class='info-item'>{{ userOtherInfo.tweetsCount }}<view>推文</view></view>
+      <view class='info-item'>{{ userOtherInfo.follower }}<view>粉丝</view></view>
+      <view class='info-item'>{{ userOtherInfo.following }}<view>已关注</view></view>
+    </view>
+    <button class='mine-button' catchtap='clickFollowing' wx:if='{{ !userInfo.isFollowing && userInfo.id !== myUserInfo.id }}'>关注</button>
+    <button class='mine-button' catchtap='clickUnfollowing' wx:if='{{ userInfo.isFollowing && userInfo.id !== myUserInfo.id }}'>已关注</button>
+  </view>
+</view>
+
+<view class='other-info'>
+  <view class='username'>{{ userInfo.username }}</view>
+  <view wx:if='{{ userInfo.introduction }}' class='introduction'>{{ userInfo.introduction }}</view>
+  <view wx:if='{{ userInfo.website }}' class='website'>{{ userInfo.website }}</view>
+</view>
+
+<ly-container />
+
+<ly-fence picturesList='{{ tweetsList }}'/>

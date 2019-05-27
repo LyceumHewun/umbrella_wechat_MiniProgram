@@ -1,0 +1,68 @@
+/* pages/account/signup.wxss */
+
+.title {
+  height: 13vh;
+  line-height: 21vh;
+  vertical-align: text-bottom;
+  margin-bottom: 80rpx;
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+
+.signup {
+  margin: 0 50rpx;
+}
+
+.signup .wechat-phone {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.signup .tips {
+  color: #8a8a8a;
+  margin: 35rpx 0;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.signup .error-tips {
+  color: #FF4040;
+}
+
+.signup .tips text {
+  color: #000;
+  font-weight: bold;
+}
+
+.signup input {
+  margin-bottom: 35rpx;
+}
+
+.signup button {
+  margin-bottom: 35rpx;
+}
+
+.signup .phone-view {
+  height: 100rpx;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 35rpx;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+
+.signup .phone-view input, .signup .phone-view button {
+  float: left;
+  /* display: inline-block; */
+  margin: 0;
+}
+
+.signup .phone-view input {
+  width: 60%;
+  border: none;
+}
+
+.signup .phone-view button {
+  width: calc(100% - 60% - 60rpx);
+  right: -1px;
+  border-radius: 0;
+}
